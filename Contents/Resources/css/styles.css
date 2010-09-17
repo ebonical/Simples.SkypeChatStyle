@@ -168,7 +168,7 @@ div#Chat {
 	font: 10px/22px "Lucida Grande", Verdana, Arial, sans-serif;
 }
 div#Chat p {
-	font-size: 11px;
+  font-size: 11px;
 	padding: 0;
 	color: black;
 }
@@ -182,36 +182,58 @@ div#Chat div.message-block {
 	-webkit-animation-duration: 0.9s;
 }
 div#Chat div.buddy-icon {
-	float: left;
-	line-height: 1px;
+  float: left;
+  line-height: 1px;
 }
 div#Chat div.buddy-icon img {
-	width: 30px;
-	-webkit-border-radius: 4px;
-	-webkit-box-shadow:1px 1px 2px rgba(0,0,0,0.5);
+  width: 40px;
+  -webkit-border-radius: 4px;
+  -webkit-box-shadow:1px 1px 2px rgba(0,0,0,0.5);
 }
 div#Chat div.message {
 	position:relative;
-	margin: 0 0 0 43px;
+	margin: 0 0 0 53px;
 	padding: 3px 6px;
-	line-height: 18px;
+	line-height: 16px;
   overflow:auto;
 	border: 1px solid #62A9DF;
 	-webkit-box-shadow:1px 1px 4px rgba(0,0,0,0.25);
 	-webkit-border-radius: 5px;
-	border-radiusadius: 5px;
-	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#c2e0fd)
-		, color-stop(2%, #d9ebfd), color-stop(50%, #d9ebfd));
+	border-radius: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff),
+    color-stop(2%, #F5FAFE), color-stop(50%, #F5FAFE), to(#ECF5FE));
 	text-shadow: 1px 1px 1px #fff;
 }
 div#Chat div.message-speech {
-	width:9px;
-	height:14px;
-	position:absolute;
-	top: 15px;
-	left: 45px;
-	z-index:2;
-	background: transparent url(../images/message-top.png) no-repeat top left;
+  width:9px;
+  height:14px;
+  position:absolute;
+  top: 15px;
+  left: 55px;
+  z-index:2;
+  background-color: #F5FAFE;
+  overflow: hidden;
+}
+div#Chat div.message-speech .one,
+div#Chat div.message-speech .two {
+  border: 1px solid #62A9DF;
+  display: block;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  position: absolute;
+}
+div#Chat div.message-speech .one {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  right: 0px;
+  bottom: 5px;
+}
+div#Chat div.message-speech .two {
+  -webkit-border-radius: 7px;
+  border-radius: 7px;
+  top: 8px;
+  right: 0;
 }
 div#Chat div.outgoing div.message {
 	border-color: #9F9F9F;
@@ -219,12 +241,16 @@ div#Chat div.outgoing div.message {
 		, color-stop(2%, #E7E7E7), color-stop(50%, #E7E7E7));
 }
 div#Chat div.outgoing div.message-speech {
-	background-image: url(../images/message-top-outgoing.png);
+  background-color: #E7E7E7;
+}
+div#Chat div.outgoing div.message-speech .one,
+div#Chat div.outgoing div.message-speech .two {
+  border-color: #9F9F9F;
 }
 div#Chat div.message .message-item {
 }
 div#Chat div.message div.next {
-	border-top: 1px solid #9FD4FE;
+	border-top: 1px solid #CDE7FE;
 	margin-top: 3px;
 	padding-top: 3px;
 }
@@ -234,6 +260,9 @@ div#Chat div.outgoing div.next {
 div#Chat div.message .message-meta {
 	float:right;
 	color: #62BEF1;
+	line-height: 1;
+	padding-top: 3px;
+	padding-left: 2px;
 }
 div#Chat div.outgoing div.message-meta {
 	color: #AFAFAF;
@@ -291,7 +320,7 @@ div#Chat div.flow {
 	border: 1px solid #E1C843;
 	-webkit-box-shadow:1px 1px 4px rgba(0,0,0,0.25);
 	-webkit-border-radius: 5px;
-	border-radiusadius: 5px;
+	border-radius: 5px;
 	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#FFF4B2)
 		, color-stop(2%, #FEF7CF), color-stop(50%, #FEFBCE));
 	text-shadow: 0px 0px 1px #fff;
@@ -308,14 +337,21 @@ div#Chat div.flow div.flow-meta {
 
 
 div#Chat div.service {
-	background: -webkit-gradient(linear, left top, left bottom, from(#d9d9d9), to(#adadad));
-	border-bottom: 1px solid #777;
-	padding: 1px 20px;
-	font: 10px/22px "Lucida Grande", Verdana, Arial, sans-serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#D6D6D6), to(#CCC));
+  border-bottom: 1px solid #777;
+  padding: 1px 20px;
+  font: 10px/16px "Lucida Grande", Verdana, Arial, sans-serif;
+}
+div#Chat div.service a {
+  white-space: nowrap;
 }
 
+div#Chat p.content,
+div#Chat div.outgoing p.content {
+  color: #333;
+}
 div#Chat p.context {
-	color: #528AA6;
+  color: #528AA6;
 }
 div#Chat div.outgoing p.context {
 	color: #898989;
