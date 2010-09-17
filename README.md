@@ -7,14 +7,8 @@ Simples is a very nice chat style for Skype. It is heavily influenced by the [Re
 
 It utilises some of webkits new CSS3 which should make adding or changing any colour styles very easy. Fade-in effects are also provided by webkits CSS animation framework.
 
-## Installation
+## Extra hacks
 
-1. [Download][download] the latest Simples.SkypeChatStyle release
-2. Double click `Simples.SkypeChatStyle-0.3.zip` to extract it
-4. Double click the `Simple.SkypeChatStyle` bundle
-5. Select the Simples style from the Skype 'Chat' preferences 
-
-[download]: http://github.com/downloads/edds/Simples.SkypeChatStyle/Simples.SkypeChatStyle-0.3.zip
-[Homepage]: http://edds.github.com/Simples.SkypeChatStyle/ "The homepage"
-[Renkoo]: http://www.adiumxtras.com/index.php?a=xtras&xtra_id=2160
-[Adium]: http://www.adium.im
+* Avatar is slightly larger
+* `<code>` tags are wrapped around text that is surround with back ticks (&#96;)  
+  e.g. `` `var i = 0;` `` becomes `<code>var i = 0;</code>`
