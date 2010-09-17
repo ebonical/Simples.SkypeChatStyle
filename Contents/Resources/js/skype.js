@@ -6,6 +6,8 @@ var mouseOverElement, alertDoc, topicDoc, chatDoc, topicTextArea, topicElement, 
 
 var canChangeTopicOption;
 
+// showdown markdown (lite) converter
+var converter;
 
 onload = function() {
     alertDoc = parent.frames['alertFrame'].document;
@@ -21,6 +23,7 @@ onload = function() {
     canChangeTopicOption = false;
   resizeInProcess = false;
   isPublicChat = false;
+  converter = new Showdown.converter();
 }
 
 onresize = function() {
@@ -80,12 +83,24 @@ function _createMessage(html, messageID){
     
     var range = chatDoc.createRange();
     range.selectNode(chat);
+    
+    // lite markdown
+    html = converter.makeHtml(html);
+    
     var documentFragment = range.createContextualFragment(html);
 
   if(!messageID) var messageID = randomString();
   documentFragment.childNodes[0].id = messageID;
     
     return documentFragment;
+}
+
+function escapeHtml(html) {
+  return html.
+    replace(/&/gmi, '&amp;').
+    replace(/"/gmi, '&quot;').
+    replace(/>/gmi, '&gt;').
+    replace(/</gmi, '&lt;');
 }
 
 function appendNextMessage(html, messageID){
@@ -104,6 +119,10 @@ function appendNextMessageNoScroll(html, messageID){
     
     var range = chatDoc.createRange();
     range.selectNode(insert.parentNode);
+    
+    // lite markdown
+    html = converter.makeHtml(html);
+    
     var newNode = range.createContextualFragment(html);
 
   if(!messageID) var messageID = randomString();
