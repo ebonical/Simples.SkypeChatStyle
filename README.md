@@ -1,5 +1,5 @@
 # Simples Skype Chat Style
-[http://edds.github.com/Simples.SkypeChatStyle][Homepage]
+Forked from [http://edds.github.com/Simples.SkypeChatStyle][Homepage]
 
 ## Description
 
@@ -13,6 +13,6 @@ It utilises some of webkits new CSS3 which should make adding or changing any co
 * `<code>` tags are wrapped around text that is surround with back ticks (&#96;)  
   e.g. `` `var i = 0;` `` becomes `<code>var i = 0;</code>`
 
-
+[Homepage]: http://edds.github.com/Simples.SkypeChatStyle/ "The homepage"
 [Renkoo]: http://www.adiumxtras.com/index.php?a=xtras&xtra_id=2160
 [Adium]: http://www.adium.im
