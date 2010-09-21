@@ -157,21 +157,21 @@ function nearBottom() {
 var scrollInterval = null;
 var scrollStep = 10;
 function scrollToBottom() {
-  var currentBottom = chatDoc.body.scrollTop;
-  var targetBottom = chatDoc.body.offsetHeight - window.innerHeight;
-  console.log(currentBottom + " - " + targetBottom);
-  if(currentBottom < targetBottom && scrollStep > 0){
-    var moveTo = ((targetBottom - currentBottom)/scrollStep);
-    chatDoc.body.scrollTop = currentBottom + moveTo;
-    scrollStep = scrollStep -1;
-    if(!scrollInterval) scrollInterval = setInterval(scrollToBottom, 10);
-  } else {
-    chatDoc.body.scrollTop = chatDoc.body.offsetHeight
-    clearInterval(scrollInterval);
-    scrollInterval = null;
-    scrollStep = 15;
-  }
-//  chatDoc.body.scrollTop = chatDoc.body.offsetHeight;
+  // var currentBottom = chatDoc.body.scrollTop;
+  // var targetBottom = chatDoc.body.offsetHeight - window.innerHeight;
+  // console.log(currentBottom + " - " + targetBottom);
+  // if(currentBottom < targetBottom && scrollStep > 0){
+  //   var moveTo = ((targetBottom - currentBottom)/scrollStep);
+  //   chatDoc.body.scrollTop = currentBottom + moveTo;
+  //   scrollStep = scrollStep -1;
+  //   if(!scrollInterval) scrollInterval = setInterval(scrollToBottom, 10);
+  // } else {
+  //   chatDoc.body.scrollTop = chatDoc.body.offsetHeight
+  //   clearInterval(scrollInterval);
+  //   scrollInterval = null;
+  //   scrollStep = 15;
+  // }
+  chatDoc.body.scrollTop = chatDoc.body.offsetHeight;
 }
 
 /* Message status change */
