@@ -171,11 +171,6 @@ div#topic-wrapper span.topic-editing a {
 div#Chat {
 	font: 10px/22px "Lucida Grande", Verdana, Arial, sans-serif;
 }
-div#Chat p {
-  font-size: 11px;
-	padding: 0;
-	color: black;
-}
 div#Chat div.message-block {
   position:relative;
 	clear: both;
